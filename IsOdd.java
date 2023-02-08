@@ -1,4 +1,4 @@
-IsOdd?
+is odd?
 
 import java.io.*;
 import  java.util.*;
