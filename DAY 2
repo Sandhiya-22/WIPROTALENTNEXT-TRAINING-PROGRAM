@@ -60,3 +60,173 @@ int carry=0;
   return str;
  }
 }
+//CODE 3
+import java.io.*;
+import java.util.*;
+class UserMainCode{
+public int getCodeThroughString(String input1){
+String word[]=input1.split(" ");  
+int sum=0;  
+for(int i=0;i<word.length;i++)  
+{          
+sum+=word[i].length();  
+}   
+return (1 + (sum-1) %9); 
+}}
+//CODE4
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+ public class Result
+  {
+    public final int output1;
+    public final int output2;
+public Result(int out1,int out2){
+  output1=out1;
+  output2=out2;
+}}
+  public Result findOriginalFirstAndSum(int[] input1,int input2){
+int[] arr=new int[input2];
+  arr[input2-1]=input1[input2-1];
+  int sum=arr[input2-1];
+  for(int i=input2-2;i>=0;i--)
+        {
+   arr[i]=input1[i]-arr[i+1];
+   sum+=arr[i];
+  }
+         Result r1= new Result(arr[0],sum);
+   return r1;
+  }
+    }
+//CODE4   
+ import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+ public class Result
+  {
+    public final int output1;
+    public final int output2;
+public Result(int out1,int out2){
+  output1=out1;
+  output2=out2;
+}}
+  public Result findOriginalFirstAndSum(int[] input1,int input2){
+int[] arr=new int[input2];
+  arr[input2-1]=input1[input2-1];
+  int sum=arr[input2-1];
+  for(int i=input2-2;i>=0;i--)
+        {
+   arr[i]=input1[i]-arr[i+1];
+   sum+=arr[i];
+  }
+         Result r1= new Result(arr[0],sum);
+   return r1;
+  }
+    }
+//CODE 5
+ import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+public int mostFrequentlyOccurringDigit(int[] input1,int input2)
+{
+               int[] arr=new int[10];
+  for(int i=0;i<input2;i++)
+  {
+    while(input1[i]!=0){
+    int rem=input1[i]%10;
+    arr[rem]++;
+    input1[i]/=10;
+   }
+ }
+ int max=0;
+ int higest_occur_number=0;
+ for(int i=0;i<10;i++)
+ {
+  if(arr[i]>=max)
+  {max=arr[i];
+    higest_occur_number=i;
+  }
+ }
+ return higest_occur_number;
+}}
+//CODE 6
+import java.io.*;
+import  java.util.*;
+
+class UserMainCode{  
+
+public int sumOfPowerOfDigits(int input1){ 
+
+double sum=0.0; 
+String str=Integer.toString(input1);   
+for(int i=0;i<str.length()-1;i++)  {   
+
+ int a=Character.getNumericValue(str.charAt(i)); 
+ int b=Character.getNumericValue(str.charAt(i+1));   
+sum=sum + Math.pow(a, b);  
+ } 
+ return (int)sum+1; 
+}}
+import java.io.*;
+
+import  java.util.*;
+
+class UserMainCode{
+
+public int sumOfSumsOfDigits(int input1){             
+
+String str=Integer.toString(input1); 
+
+int sum=0; 
+for(int i=0;i<str.length();i++)  {   
+ for(int j=i;j<str.length();j++){   
+
+int num=Character.getNumericValue(str.charAt(j));   
+
+sum+=num;  
+}} 
+
+  return sum; 
+
+}}
+//CODE 7
+import java.io.*;
+import java.util.*;
+class UserMaincode
+{
+   public String indentifyPossibleWords(String input1, String input2)
+{
+String st[]=input2.split(":");
+        String str="";
+        for(int i=0;i<st.length;i++)
+        {
+            if(st[i].length()!=input1.length())
+                continue;
+            String test=input1;
+            int x=test.indexOf("_");
+            char ch=st[i].charAt(x);
+            test=test.replace('_', ch);
+            test=test.toUpperCase();
+            st[i]=st[i].toUpperCase();
+            if(st[i].equals(test))
+            {
+                if(str=="")
+                {
+                    str=str+test;
+                }
+                else
+                {
+                    str=str+":"+test;
+                }
+            }
+        }
+        if(str=="")
+            str="ERROR-009";
+        return str;
+}
+}
+
+
