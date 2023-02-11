@@ -1,0 +1,145 @@
+import java.io.*;
+
+import java.util.*;
+public class ex1 {
+
+	public static void main(String[] args) {
+		   
+		{  
+	   
+		{  
+		//number to be check  
+		int num=912;  
+		//checks the number is greater than 0 or not  
+		if(num>0)  
+		{  
+		System.out.println("The number is positive.");  
+		}  
+		//checks the number is less than 0 or not  
+		else if(num<0)  
+		{  
+		System.out.println("The number is negative.");  
+		}  
+		//executes when the above two conditions return false  
+		else  
+		{  
+		System.out.println("The number is zero.");  
+		}  
+		}  
+		}  
+		// TODO Auto-generated method stub
+
+	}
+
+}
+import java.io.*;
+
+import java.util.*;
+public class ex2 {
+
+	public static void main(String[] args) {
+		 
+		 
+		      
+		           int number = 29;
+
+
+		     
+		     if (number % 2 == 0)
+		              System.out.println(number + " is Even");
+		     else
+		              System.out.println(number + " is odd");
+		      }
+		 
+ 
+
+	}
+  import java.io.*;
+
+import java.util.*;
+ 
+public class ex3 {
+
+	public static void main(String[] args) {
+		int number =29;
+	if(number % 2 ==0)
+		System.out.println(number +"is Even");
+	else
+		System.out.println(number+"is odd");
+	}
+	}
+  import java.util.Scanner;
+public class ex4 {
+	private static Scanner sc;
+
+	public static void main(String[] args) 
+	{
+	 int number,i,evensum=0,oddsum=0;
+	 sc = new Scanner(System.in);
+	 System.out.print("please enter any Number: ");
+	 number=sc.nextInt();
+	 for(i=1; i<=number;i++)
+	 {
+		 if(i%2==0)
+		 {
+			 evensum=evensum + i;
+		 }
+	 else
+	 {
+		 oddsum=oddsum+i;
+	 }
+	 }
+	 System.out.println("\n The sum of even number upto"+number+"="+evensum);
+	 System.out.println("\n The sum of odd number upto"+ number+"="+oddsum);
+	}}
+public class ex5 {
+
+	public static void main(String[] args) 
+	{
+		int number=1;
+		printNumbers(number);
+	}
+	public static void printNumbers(int num)
+	{
+		if(num<=100)
+		{
+			System.out.print(num +"");
+			printNumbers(num +1);
+		}
+	}
+}
+public class ex6 {
+	public static void main(String[]args) {
+		int number=99;
+				for(int i=1;i<number;i=i+2) {
+					System.out.println(i);
+				}
+	}
+
+}
+public class ex7 {
+
+	public static void main(String[] args) {
+		int number =100;
+		for(int i=1;i<number; i=i+2) {
+			System.out.println(i);
+		}
+		 
+
+	}
+
+}
+ import java.util.Scanner;
+public class ex8 {
+	private static Scanner sc;
+	public static void main(String[] args) {
+		int number,i;
+		sc=new Scanner(System.in);
+		System.out.print("please enter the maximum value:");
+		number=sc.nextInt();
+		for(i=number;i>=1;i--)
+		{
+		System.out.print(i+"\t");
+		}
+	}}
+		
